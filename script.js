@@ -1,11 +1,11 @@
-/* Nim Trainer by [your name]
+/* Nim Trainer by Ihor Parov
  * based on this flowchart:
  * https://lucid.app/lucidchart/2018baaf-4c26-4a76-a0d5-93c97f444425/view
  */
 
 /* Global Variables */
-
-
+var trainer = false;
+var count = 0;
 /** 
  * main  
  * Handles new Nim games with gametype choice simple or trainer and a play again option. 
@@ -14,7 +14,16 @@
  */
 /* Main */
 function main(){
+let again = true
+while(again==true){  
+let trainer = confirm("Trainer mode?");
+again = confirm("Again?");
 
+
+
+
+
+}
 }
 
 /** 
@@ -24,6 +33,7 @@ function main(){
  * @return none
  */
 function playNim(){
+
 
 }
 
