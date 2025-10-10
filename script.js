@@ -16,7 +16,7 @@ var count = 0;
 function main(){
 let again = true;
 while(again==true){  
-let trainer = confirm("Trainer mode?");
+trainer = confirm("Trainer mode?");
 playNim()
 again = confirm("Again?");
 
@@ -30,14 +30,15 @@ again = confirm("Again?");
  * @return none
  */
 function playNim(){
-let count = 0;
-while(count<21){
-    userTurn();
-    if(count>20)alert("You lose!");
-    cpuTurn() ;
-    if(count>20) alert("You win!");
+count = 0;
+    while(count<21){
+     userTurn();
+    if(count>20) alert("You lose!")
+    else {
+     cpuTurn() ;
+     if(count>20) alert("You win!");
 }
-
+}
 }
 /** 
  * userTurn  
@@ -48,9 +49,14 @@ while(count<21){
 function userTurn(){
     let turn = prompt("Give me a number 1-3");
     turn=parseInt(turn);
-    if(turn<1||turn>3)alert("Your Input is Invalid!");
-    else(turn+count);
-
+    if(turn<1||turn>3){
+        alert("Your Input is Invalid!");
+    }
+    else{
+    turn+=count;
+    alert("Count is now " + count);
+    }
+    
 }
 
 /** 
@@ -60,13 +66,5 @@ function userTurn(){
  * @return none
  */
 function cpuTurn(){
-turn = 0
- if(count = 17) turn = 3
- else if (count= 18) turn = 2
- else if (count>18) turn = 1
- else if (trainer == true) turn = 4 - count % 4
- else   turn = (int)(Math.random() * (max - min + 1) + min);
-count+=turn
-turn=count
+count+=3
 }
-
